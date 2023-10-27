@@ -24,7 +24,7 @@
   <body>
     <!--Website header-->
 
-    <header class="header-section hide">
+    <header class="header-section">
       <div class="container container-header">
         <nav class="nav">
           <a href="./index.html" class="nav-logo link">
@@ -56,13 +56,92 @@
             </li>
           </ul>
         </address>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="hmbr-menu" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hmbr"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
+      <!-- MOBILE MENU -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="mobile-modal-button-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu list">
+          <li class="mobile-menu-item">
+            <a href="./index.html" class="mobile-menu-link active link"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a href="./portfolio.html" class="mobile-menu-link link"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link link">Contacts</a>
+          </li>
+        </ul>
+        <ul class="modal-address-list list">
+          <li class="modal-address-list-item-tel">
+            <a class="mobile-address-link-tel link" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="modal-address-list-item-email">
+            <a
+              class="mobile-address-link-email link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-social-links-container list">
+          <li class="social-links-items-container">
+            <a href="" class="social-links link">
+              <svg class="social-icons" width="16" height="16">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links-items-container">
+            <a href="" class="mobile-social-links link">
+              <svg class="social-icons" width="16" height="16">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links-items-container">
+            <a href="" class="mobile-social-links link">
+              <svg class="social-icons" width="16" height="16">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-links-items-container">
+            <a href="" class="mobile-social-links link">
+              <svg class="social-icons" width="16" height="16">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <!--Section 1-->
 
-      <section class="hero-section hide">
+      <section class="hero-section">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="button" type="button" data-modal-open>
@@ -139,17 +218,32 @@
           <h2 class="work-title">What are we doing</h2>
           <ul class="work-list list">
             <li class="work-list-item">
-              <img src="./images/img1.jpg" alt="Laptop" width="360" />
+              <picture>
+                <source
+                  srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
+                />
+                <img src="./images/img1.jpg" alt="Laptop" width="360" />
+              </picture>
             </li>
             <li class="work-list-item">
-              <img src="./images/img2.jpg" alt="Smartphone" width="360" />
+              <picture>
+                <source
+                  srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
+                />
+                <img src="./images/img2.jpg" alt="Smartphone" width="360" />
+              </picture>
             </li>
             <li class="work-list-item">
-              <img
-                src="./images/img3.jpg"
-                alt="Smartphone in a hand"
-                width="360"
-              />
+              <picture>
+                <source
+                  srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
+                />
+                <img
+                  src="./images/img3.jpg"
+                  alt="Smartphone in a hand"
+                  width="360"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -162,11 +256,19 @@
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-card">
-              <img
-                src="./images/producrdesigner.jpg"
-                alt="Mark Guerrero"
-                width="264"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/producrdesigner.jpg    1x,
+                    ./images/producrdesigner@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/producrdesigner.jpg"
+                  alt="Mark Guerrero"
+                  width="264"
+                />
+              </picture>
               <div class="team-list-item">
                 <h3 class="team-list-title">Mark Guerrero</h3>
                 <p class="team-list-text">Product Designer</p>
@@ -204,11 +306,19 @@
             </li>
 
             <li class="team-card">
-              <img
-                src="./images/frontenddeveloper.jpg"
-                alt="Tom Ford"
-                width="264"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/frontenddeveloper.jpg    1x,
+                    ./images/frontenddeveloper@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/frontenddeveloper.jpg"
+                  alt="Tom Ford"
+                  width="264"
+                />
+              </picture>
               <div class="team-list-item">
                 <h3 class="team-list-title">Mark Guerrero</h3>
                 <p class="team-list-text">Product Designer</p>
@@ -245,11 +355,20 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/marketing.jpg"
-                alt="Camila Garcia"
-                width="264"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/marketing.jpg    1x,
+                    ./images/marketing@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/marketing.jpg"
+                  alt="Camila Garcia"
+                  width="264"
+                />
+              </picture>
+
               <div class="team-list-item">
                 <h3 class="team-list-title">Mark Guerrero</h3>
                 <p class="team-list-text">Product Designer</p>
@@ -286,11 +405,20 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/uidesigner.jpg"
-                alt="Daniel Wilson"
-                width="264"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/uidesigner.jpg    1x,
+                    ./images/uidesigner@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/uidesigner.jpg"
+                  alt="Daniel Wilson"
+                  width="264"
+                />
+              </picture>
+
               <div class="team-list-item">
                 <h3 class="team-list-title">Mark Guerrero</h3>
                 <p class="team-list-text">Product Designer</p>
@@ -534,7 +662,13 @@
         </form>
       </div>
     </div>
-
+    <script
+      defer=""
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
